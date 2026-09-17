@@ -7,9 +7,9 @@
 [![English](https://img.shields.io/badge/lang-English%20🇺🇸-white)](README.md)
 [![Русский](https://img.shields.io/badge/язык-Русский%20🇷🇺-white)](README.ru.md)
 
-<img alt="last-commit" src="https://img.shields.io/github/last-commit/crc137/Chill-With-You-Radio-Mod.?style=flat&amp;logo=git&amp;logoColor=white&amp;color=0080ff" style="margin: 0px 2px;">
-<img alt="repo-top-language" src="https://img.shields.io/github/languages/top/crc137/Chill-With-You-Radio-Mod.?style=flat&amp;color=0080ff" style="margin: 0px 2px;">
-<img alt="repo-language-count" src="https://img.shields.io/github/languages/count/crc137/Chill-With-You-Radio-Mod.?style=flat&amp;color=0080ff" style="margin: 0px 2px;">
+<img alt="last-commit" src="https://img.shields.io/github/last-commit/crc137/Chill-With-You-Radio-Mod?style=flat&amp;logo=git&amp;logoColor=white&amp;color=0080ff" style="margin: 0px 2px;">
+<img alt="repo-top-language" src="https://img.shields.io/github/languages/top/crc137/Chill-With-You-Radio-Mod?style=flat&amp;color=0080ff" style="margin: 0px 2px;">
+<img alt="repo-language-count" src="https://img.shields.io/github/languages/count/crc137/Chill-With-You-Radio-Mod?style=flat&amp;color=0080ff" style="margin: 0px 2px;">
 <img alt="version" src="https://img.shields.io/badge/version-26.1.1-blue" style="margin: 0px 2px;">
 </div>
 
@@ -32,6 +32,17 @@ For the radio to work you need **all** of these:
 
 
 ## How to install (player, no build needed)
+
+**Option A — one-click installer (recommended)**
+
+Put `install.sh`, `install.bat`, `RadioStreamPlugin.dll` and `radiostations.txt` in one folder and run the installer for your OS:
+
+- **Windows:** double-click `install.bat`
+- **Linux / Steam Deck:** `./install.sh`
+
+The installer finds the game, checks BepInEx, and copies the mod into `BepInEx/plugins`. If the game is in a non-standard place it will ask you for the path. BepInEx still needs to be installed once (see below).
+
+**Option B — manual**
 
 1. Install the game via Steam and launch it **once** so folders are created.
 2. Put **BepInEx 5.x** into the game folder:
