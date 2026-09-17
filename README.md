@@ -2,7 +2,7 @@
   <a href="https://github.com/coonlink">
     <img width="90px" src="https://raw.coonlink.com/cloud/Chill%20with%20You%20Lo-Fi%20Story.png" alt="Logo" />
   </a>
-  <h1>Chill with You : Lo-Fi Story — Мод «Радио»</h1>
+  <h1>Chill with You : Lo-Fi Story — Radio Mod</h1>
 
 [![English](https://img.shields.io/badge/lang-English%20🇺🇸-white)](README.md)
 [![Русский](https://img.shields.io/badge/язык-Русский%20🇷🇺-white)](README.ru.md)
@@ -16,87 +16,89 @@
 <br />
 
 <div align="center">
-  <p>Добавляет в игру <b>рабочее интернет-радио</b>. Переключение станций — без заикания.</p>
+  <p>Adds working <b>internet radio</b> to the game. Station switching works without stuttering.</p>
 </div>
 
-## Требования
+## Requirements
 
-Чтобы радио заработало, нужно **всё** из списка:
+For the radio to work you need **all** of these:
 
-1. Игра **Chill with You : Lo-Fi Story** (любая версия, Steam).
-2. **BepInEx 5.x**, установленный в папку игры
+1. The game **Chill with You : Lo-Fi Story** (any version, Steam).
+2. **BepInEx 5.x** installed into the game folder
    → `...Chill with You Lo-Fi Story/BepInEx/`
-   (скачать тут: `https://github.com/BepInEx/BepInEx/releases`, брать `BepInEx_x64_5.4.x`).
-3. Файл плагина `RadioStreamPlugin.dll` (этот мод).
-4. Интернет (радио играет вживую из сети).
+   (download from `https://github.com/BepInEx/BepInEx/releases`, take `BepInEx_x64_5.4.x`).
+3. The plugin file `RadioStreamPlugin.dll` (this mod).
+4. Internet connection (radio streams are live online).
 
 
+## How to install (player, no build needed)
 
-## Как установить (игроку, сборка не нужна)
+**Option A — one-click installer (recommended)**
 
-**Вариант A — установщик в один клик (рекомендую)**
+Put `install.sh`, `install.bat`, `RadioStreamPlugin.dll` and `radiostations.txt` in one folder and run the installer for your OS:
 
-Положите `install.sh`, `install.bat`, `RadioStreamPlugin.dll` и `radiostations.txt` в одну папку и запустите установщик для своей ОС:
-
-- **Windows:** двойной клик по `install.bat`
+- **Windows:** double-click `install.bat`
 - **Linux / Steam Deck:** `./install.sh`
 
-Установщик сам найдёт игру, проверит BepInEx и скопирует мод в `BepInEx/plugins`. Если игра стоит в нестандартном месте — спросит путь вручную. BepInEx по-прежнему нужно поставить один раз (см. ниже).
+The installer finds the game, checks BepInEx, and copies the mod into `BepInEx/plugins`. If the game is in a non-standard place it will ask you for the path. BepInEx still needs to be installed once (see below).
 
-**Вариант B — вручную**
+**Option B — manual**
 
-1. Установите игру через Steam и **один раз** запустите её, чтобы создались папки.
-2. Положите **BepInEx 5.x** в папку игры:
-   - Windows: `Chill with You Lo-Fi Story/BepInEx/`
-   - Steam Deck / Linux (flatpak):
+1. Install the game via Steam and launch it **once** so folders are created.
+2. Put **BepInEx 5.x** into the game folder:
+   - Windows: `...Chill with You Lo-Fi Story/BepInEx/`
+   - Steam Deck / Linux (Flatpak):
      `~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Chill with You Lo-Fi Story/BepInEx/`
-3. Скопируйте **оба** файла из этого репозитория в папку **plugins**:
+3. Copy **both** files from this repo into the **plugins** folder:
    ```
-   BepInEx/plugins/RadioStreamPlugin.dll     ← сам мод
-   BepInEx/plugins/radiostations.txt         ← список станций
+   BepInEx/plugins/RadioStreamPlugin.dll     ← the mod
+   BepInEx/plugins/radiostations.txt         ← station list
    ```
-4. Запустите игру, откройте меню музыки и переключайте станции клавишами **J / K**.
+4. Launch the game. In the music menu, switch stations with **J / K**.
 
-Если файла со станциями нет — плагин сам создаст стандартный при первом запуске.
+If the station list is missing, the plugin creates a default one on first run.
 
 
 
-## Как настроить станции
+## How to configure stations
 
-`radiostations.txt` — по одной станции на строку, формат:
+`radiostations.txt` — one station per line, format:
 
 ```
-Название|URL
+Name|URL
 ```
 
-Пример:
+Example:
 
 ```
 Lo-Fi Beats|http://example.com/lofi.mp3
 Jazz Radio|http://example.com/jazz.pls
 ```
 
-Измените файл и **перезапустите игру** — новые станции подхватятся. Радио играет только если адрес станции доступен (для некоторых `.pls`/`.m3u` нужен браузер — лучше вставлять прямые ссылки на `.mp3`/`.aac`).
+Edit the file, then **restart the game** for changes to apply. Stations play only if the URL is reachable (some `.pls`/`.m3u` links need the browser first — prefer direct `.mp3`/`.aac` links).
 
 
 
-## Управление
+## Controls
 
-| Клавиша | Действие |
+| Key | Action |
 |---|---|
-| **J** | Предыдущая станция |
-| **K** | Следующая станция |
+| **J** | Previous station |
+| **K** | Next station |
 
 
-## Если не работает
 
-- **Нет радио в меню / нет музыки** → проверьте, что BepInEx реально установлен (в папке игры должна быть `BepInEx/core`) и DLL лежит в `BepInEx/plugins`.
-- **Станция не играет** → адрес недоступен или формат не поддерживается. Замените её в `radiostations.txt` на прямую ссылку потока.
-- **Не видно консоли BepInEx** → в `BepInEx/config/BepInEx.cfg` включите `[Logging.Console] Enabled = true`.
+## Troubleshooting
 
-## Сборка из исходников (для разработчиков)
+- **No radio in menu / no music** → BepInEx is not installed or the DLL is not in `BepInEx/plugins`. Make sure `BepInEx/core` exists.
+- **Station doesn't play** → URL unreachable or unsupported format. Replace it in `radiostations.txt` with a direct stream link.
+- **No BepInEx console** → add `[Logging.Console] Enabled = true` in `BepInEx/config/BepInEx.cfg`.
 
-Нужен .NET SDK (>= 6) и скрипт `build.sh` (сам находит игру на Linux / Windows, собирает и копирует DLL). Запуск:
+
+
+## Build from source (developers)
+
+Requires .NET SDK (>= 6) and `build.sh` (finds the game on Linux / Windows automatically, compiles and copies the DLL). Run:
 
 ```bash
 ./build.sh
