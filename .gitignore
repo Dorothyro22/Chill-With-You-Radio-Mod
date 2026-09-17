@@ -1,0 +1,44 @@
+# Environment / secrets
+.env
+.env.*
+!.env.example
+cookies.txt
+api/
+
+# IDE / editor
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Build / generated
+bin/
+obj/
+refs/
+release/mod/
+
+# Logs
+*.log
+logs/
+
+# Local caches
+.cache/
+tmp/
+temp/
+
+# User-specific / local files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Certificates / keys
+*.pem
+*.key
+*.p12
+*.pfx
+
+# OpenCode / local AI files
+.opencode/
