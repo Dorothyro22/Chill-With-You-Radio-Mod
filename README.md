@@ -10,7 +10,7 @@
 <img alt="last-commit" src="https://img.shields.io/github/last-commit/crc137/Chill-With-You-Radio-Mod?style=flat&amp;logo=git&amp;logoColor=white&amp;color=0080ff" style="margin: 0px 2px;">
 <img alt="repo-top-language" src="https://img.shields.io/github/languages/top/crc137/Chill-With-You-Radio-Mod?style=flat&amp;color=0080ff" style="margin: 0px 2px;">
 <img alt="repo-language-count" src="https://img.shields.io/github/languages/count/crc137/Chill-With-You-Radio-Mod?style=flat&amp;color=0080ff" style="margin: 0px 2px;">
-<img alt="version" src="https://img.shields.io/badge/version-26.1.1-blue" style="margin: 0px 2px;">
+<img alt="version" src="https://img.shields.io/badge/version-26.1.2-blue" style="margin: 0px 2px;">
 </div>
 
 <br />
@@ -23,11 +23,10 @@
 
 For the radio to work you need **all** of these:
 
-1. The game **Chill with You : Lo-Fi Story** (any version, Steam).
-2. **BepInEx 5.x** installed into the game folder
-   → `...Chill with You Lo-Fi Story/BepInEx/`
-   (download from `https://github.com/BepInEx/BepInEx/releases`, take `BepInEx_x64_5.4.x`).
-3. The plugin file `RadioStreamPlugin.dll` (this mod).
+1. The game **Chill with You : Lo-Fi Story** (any version, Steam), launched once.
+2. **BepInEx 5.x** in the game folder → `...Chill with You Lo-Fi Story/BepInEx/`
+   (the installer installs it automatically if it's missing, e.g. after a Steam reinstall).
+3. The plugin files `RadioStreamPlugin.dll` and `NLayer.dll` (this mod).
 4. Internet connection (radio streams are live online).
 
 
@@ -35,12 +34,12 @@ For the radio to work you need **all** of these:
 
 **Option A — one-click installer (recommended)**
 
-Put `install.sh`, `install.bat`, `RadioStreamPlugin.dll` and `radiostations.txt` in one folder and run the installer for your OS:
+Put `install.sh`, `install.bat`, `RadioStreamPlugin.dll`, `NLayer.dll` and `radiostations.txt` in one folder and run the installer for your OS:
 
 - **Windows:** double-click `install.bat`
 - **Linux / Steam Deck:** `./install.sh`
 
-The installer finds the game, checks BepInEx, and copies the mod into `BepInEx/plugins`. If the game is in a non-standard place it will ask you for the path. BepInEx still needs to be installed once (see below).
+The installer finds the game in **any Steam library** (including non-default and external drives), installs BepInEx automatically if it's missing (e.g. after you deleted and re-downloaded the game), and copies the mod into `BepInEx/plugins`. If the game can't be found it will ask you for the path manually.
 
 **Option B — manual**
 
@@ -49,30 +48,31 @@ The installer finds the game, checks BepInEx, and copies the mod into `BepInEx/p
    - Windows: `...Chill with You Lo-Fi Story/BepInEx/`
    - Steam Deck / Linux (Flatpak):
      `~/.var/app/com.valvesoftware.Steam/.local/share/Steam/steamapps/common/Chill with You Lo-Fi Story/BepInEx/`
-3. Copy **both** files from this repo into the **plugins** folder:
+3. Copy **all files** from this repo into the **plugins** folder:
    ```
    BepInEx/plugins/RadioStreamPlugin.dll     ← the mod
+   BepInEx/plugins/NLayer.dll                ← MP3 decoder (required)
    BepInEx/plugins/radiostations.txt         ← station list
    ```
 4. Launch the game. In the music menu, switch stations with **J / K**.
 
-If the station list is missing, the plugin creates a default one on first run.
+If the station list is missing, the plugin uses a default one. If BepInEx is missing after a reinstall, run `install.sh` / `install.bat` — it will install BepInEx for you.
 
 
 
 ## How to configure stations
 
-`radiostations.txt` — one station per line, format:
+`radiostations.txt` — one station per line, format (URL first, separated by `|`):
 
 ```
-Name|URL
+URL|Name|Author|Description
 ```
 
 Example:
 
 ```
-Lo-Fi Beats|http://example.com/lofi.mp3
-Jazz Radio|http://example.com/jazz.pls
+http://example.com/lofi.mp3|Lo-Fi Beats
+http://example.com/jazz.pls|Jazz Radio
 ```
 
 Edit the file, then **restart the game** for changes to apply. Stations play only if the URL is reachable (some `.pls`/`.m3u` links need the browser first — prefer direct `.mp3`/`.aac` links).
@@ -90,7 +90,7 @@ Edit the file, then **restart the game** for changes to apply. Stations play onl
 
 ## Troubleshooting
 
-- **No radio in menu / no music** → BepInEx is not installed or the DLL is not in `BepInEx/plugins`. Make sure `BepInEx/core` exists.
+- **No radio in menu / no music** → BepInEx is not installed or the DLL is not in `BepInEx/plugins`. Make sure `BepInEx/core` exists **and** `NLayer.dll` is next to `RadioStreamPlugin.dll`. If the game was just reinstalled, run the installer again — it restores BepInEx and the plugin.
 - **Station doesn't play** → URL unreachable or unsupported format. Replace it in `radiostations.txt` with a direct stream link.
 - **No BepInEx console** → add `[Logging.Console] Enabled = true` in `BepInEx/config/BepInEx.cfg`.
 
